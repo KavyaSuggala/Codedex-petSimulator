@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class HelloWorld {
+    public static void main(String[] args) {
+        // Write your code here 💖
+        String petName = "Sugar";
+        int happy = 10;
+        int cuddles = 10;
+        int eat = 10;
+        System.out.println("Welcome to Pet Simulator 🐶😸");
+        System.out.println("Choose your simulator letter..");
+        System.out.println("Currently available only 2 sim: p and e");
+        System.out.println("p - for play and e - for eat");
+        System.out.print("Choose : ");
+        Scanner sc = new Scanner(System.in);
+        String choose = sc.nextLine();
+        if(choose.equals("p")){
+            happy = happy+2;
+            eat = eat-2;
+            System.out.println(petName+ " is Playing...So Happily 😁");
+            System.out.println("Happiness " +happy+ " Hunger "+eat);
+        }
+        else if(choose.equals("e")){
+            eat = eat+2;
+            cuddles = cuddles+2;
+            System.out.println(petName +" is Eating....says Love you ❤️!");
+            System.out.println("Hunger "+eat+ " Cuddles " +cuddles);
+        }
+        else {
+            System.out.println("Choose from p or e, Thanks!!! 😊");
+        }
+    }
+}
